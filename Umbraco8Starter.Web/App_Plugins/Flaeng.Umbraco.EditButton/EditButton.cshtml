@@ -1,0 +1,21 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+@using ClientDependency.Core.Mvc;
+@using Umbraco.Core.Security;
+@using Umbraco.Web.Security;
+@{
+    HttpContextBase wrapper = new HttpContextWrapper(HttpContext.Current);
+    UmbracoBackOfficeIdentity user = wrapper.GetCurrentIdentity(true);
+}
+@if (user != null)
+{
+    Html.RequiresCss("/App_Plugins/Flaeng.Umbraco.EditButton/styles.css");
+    var umbNodeId = Umbraco.AssignedContentItem.Id;
+    <div id="editbutton-container">
+        <a href="/umbraco" target="_blank">
+            <img src="/Umbraco/assets/img/application/logo.png" width="24" height="24" />
+        </a>
+        <a href="/umbraco#/content/content/edit/@(umbNodeId)" target="_blank">
+            <img src="/App_Plugins/Flaeng.Umbraco.EditButton/edit.png" width="24" height="24" />
+        </a>
+    </div>
+}
