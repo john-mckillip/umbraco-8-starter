@@ -343,7 +343,6 @@ healthchecksdb
 /Umbraco8Starter.Web/obj/Debug
 /Umbraco8Starter.Web.Tests/bin/Debug
 /Umbraco8Starter.Web.Tests/obj/Debug
-/.vs/OSA
 /Umbraco8Starter.Web/App_Data/Logs
 /Umbraco8Starter.Web/App_Data/TEMP/ClientDependency
 /Umbraco8Starter.Web/App_Data/TEMP/ExamineIndexes
